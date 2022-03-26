@@ -27,6 +27,10 @@ jobs:
 
       - name: Sourcegraph Rust LSIF Indexer
         uses: sourcegraph/lsif-rust-action@main
+      - uses: actions/upload-artifact@v3
+        with:
+          name: lsif
+          path: dump.lsif
       - name: Sourcegraph LSIF Uploader
         uses: sourcegraph/lsif-upload-action@master
         with:
